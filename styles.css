@@ -22,6 +22,9 @@ header {
     background-color: rgba(0,40,72, 1);
     position: sticky;
     top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .navbar ul {
@@ -46,10 +49,57 @@ header {
     text-decoration: none;
 }
 
+.navbar-title a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
 .navbar a:hover {
     background-color: rgba(1, 60, 109, 0.3);
 }
 
 section {
     padding: 20px;
+}
+
+.home-section {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.home-section h1 {
+    color: #3d3d3d;
+}
+
+.home-section p {
+    color: #555;
+    text-align: center;
+}
+
+.about-section {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-section h1 {
+    color: #3d3d3d;
+}
+
+.about-section p {
+    color: #555;
+    text-align: center;
+}
+
+.below-section {
+    position: absolute;
+    left: 25%;
+    height: 200px;
+    width: 50%;
+    text-align: center;
 }
