@@ -162,3 +162,43 @@ section {
     right: 25%;
     text-align: justify;
 }
+
+.quickgo-section {
+    position: absolute;
+    top: 450px;
+    width: 100%;
+    height: 550px;
+    background-color: #0d3a58;
+    color: white;
+}
+
+.quickgo-section h1 {
+    /* position: absolute; */
+    margin-top: 5px;
+    text-align: center;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 50px; /* Adjust this margin value as needed */
+    margin-top: 25px;
+}
+
+.btn-quickGo {
+    /* position: absolute; */
+    top: 100px;
+    width: 400px;
+    height: 150px;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: #3498db;
+    color: white;
+    border: 1px solid;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-quickGo:hover {
+    background-color: rgb(24, 58, 168);
+}

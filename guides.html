@@ -34,39 +34,39 @@
             </ul>
         </nav>
     </header>
-<div class="willHide-div" id="willHide">
-    <section class="home-section">
-        <h1>Guides</h1>
-        <p>Basic guides to help you learn.</p>
-    </section>
-
-    <section class="below-section">
-        <p>Here you can find all the guides I have published. </br>Topics include many important things like networks or exploits.</p>
-    </section>
-
-    <div class="guide-div">
-        <section class="guide-section" id="network-section">
-            <h2>NETWORK GUIDE</h2><p>Learn the basics of networks</p>
-            <button class="btn-goToGuide" onClick="guideHide('networkGuide', 'willHide')">// Go to Guide</button>
+    <div class="willHide-div" id="willHide">
+        <section class="home-section">
+            <h1>Guides</h1>
+            <p>Basic guides to help you learn.</p>
         </section>
 
-        <section class="guide-section"  id="file-section" style="left: 400px;">
-            <h2>FILE GUIDE</h2><p>Learn the file types and what they do</p>
-            <button class="btn-goToGuide" onClick="guideHide('fileGuide', 'willHide')">// Go to Guide</button>
+        <section class="below-section">
+            <p>Here you can find all the guides I have published. </br>Topics include many important things like networks or exploits.</p>
         </section>
 
-        <section class="guide-section"  id="exploit-section" style="left: 800px;">
-            <h2>EXPLOIT GUIDE</h2><p>Learn how exploits work and how to create them</p>
-            <button class="btn-goToGuide" onClick="guideHide('exploitGuide', 'willHide')">// Go to Guide</button>
-        </section>
+        <div class="guide-div">
+            <section class="guide-section" id="network-section">
+                <h2>NETWORK GUIDE</h2><p>Learn the basics of networks</p>
+                <button class="btn-goToGuide" onClick="guideHide('networkGuide', 'willHide')">// Go to Guide</button>
+            </section>
 
-        <section class="guide-section"  id="hacking-section" style="left: 1200px;">
-            <h2>HACKING GUIDE</h2><p>Soon</p>
-        </section>
+            <section class="guide-section"  id="file-section" style="left: 400px;">
+                <h2>FILE GUIDE</h2><p>Learn the file types and what they do</p>
+                <button class="btn-goToGuide" onClick="guideHide('fileGuide', 'willHide')">// Go to Guide</button>
+            </section>
+
+            <section class="guide-section"  id="exploit-section" style="left: 800px;">
+                <h2>EXPLOIT GUIDE</h2><p>Learn how exploits work and how to create them</p>
+                <button class="btn-goToGuide" onClick="guideHide('exploitGuide', 'willHide')">// Go to Guide</button>
+            </section>
+
+            <section class="guide-section"  id="hacking-section" style="left: 1200px;">
+                <h2>HACKING GUIDE</h2><p>Soon</p>
+            </section>
+        </div>
     </div>
-</div>
 
-<div class="div-actualGuide" id="networkGuide">
+    <div class="div-actualGuide" id="networkGuide">
     <h1>Network Guide</h1>
     <p> Difficulty Level: BEGINNER </br>
         Objective of this guide: Acquire a foundational understanding of network fundamentals, including device types, IP addresses, subnets, and port functions within the Grey Hack game environment.
@@ -97,11 +97,11 @@
         Only open Ports can be exploited. Port 0 is always open, because its the routers port.
         Hub devices are used for grouping subnets or individual devices.</br></br>
         </p>
-</div>
+    </div>
 
-<div class="div-actualGuide" id="fileGuide">
-    <h1>File Guide</h1>
-    <p> Difficulty Level: BEGINNER </br>
+    <div class="div-actualGuide" id="fileGuide">
+        <h1>File Guide</h1>
+        <p> Difficulty Level: BEGINNER </br>
         Objective of this guide: Familiarize yourself with various file types and highlight crucial ones on your system.
         Always refer to the manual if you encounter difficulties in comprehension. 
         </br></br>
@@ -138,28 +138,20 @@
         <p><b>Additional Information:</b></br>
         Obtain safer libraries by copying them from hacked systems or purchasing / trading them from players.
         Config files define system parameters and <i>may</i> contain interesting information.</p>
-</div>
+    </div>
 
-<div class="div-actualGuide" id="exploitGuide">
-    <h1>Exploiting Guide</h1>
+    <div class="div-actualGuide" id="exploitGuide">
+        <h1>Exploiting Guide</h1>
+        
+        <p></p>REWRITING THIS GUIDE RIGHT NOW</p>
+    </div>
+
+    <div class="div-actualGuide" id="hackingGuide">
+        <h1>Hacking Guide</h1>
+        
+        <p></p>REWRITING THIS GUIDE RIGHT NOW</p>
+    </div>
     
-    <p></p>REWRITING THIS GUIDE RIGHT NOW</p>
-</div>
-
-<div class="div-actualGuide" id="hackingGuide">
-    <h1>Hacking Guide</h1>
-    
-    <p></p>REWRITING THIS GUIDE RIGHT NOW</p>
-</div>
-
-<script>
-function guideHide(showThisElementID, hideThisElementID) {
-  var hideThisElement = document.getElementById(hideThisElementID);
-  var showThisElement = document.getElementById(showThisElementID);
-    hideThisElement.style.display = "none";
-    showThisElement.style.display = "block";
-}
-
-</script>
+    <script src="script.js"></script>
 </body>
 </html>
