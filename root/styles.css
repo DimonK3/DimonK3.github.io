@@ -99,7 +99,31 @@ section {
 .below-section {
     position: absolute;
     left: 25%;
-    height: 200px;
+    right: 25%;
+    height: 100px;
     width: 50%;
     text-align: center;
+}
+
+.guide-div {
+    position: relative;
+    top: 150px;
+    height: 200px;
+    padding: 20px;
+    background-color: #a3a3a3;
+}
+
+.guide-section {
+    position: absolute;
+    height: 150px;
+    width: 200px;
+    margin-left: 50px;
+    background-color: #365f9b;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(0, 0, 0);
+}
+.guide-section p {
+    font-size: 20px;
+    font-weight: bold;
 }
