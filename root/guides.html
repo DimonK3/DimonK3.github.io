@@ -5,6 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Guides</title>
+    <style>
+        .div-actualGuide { display: none; } 
+        .div-actualGuide { margin-bottom: 50px; } 
+
+        /* .fileGuideList {
+            list-style-type: none;
+            padding: 0;
+            border: 1px solid #ddd;
+        }
+
+        .fileGuideList li {
+            padding: 8px 16px;
+            border-bottom: 1px solid #ddd;
+        } */
+    </style>
 </head>
 <body>
     <header>
@@ -19,7 +34,7 @@
             </ul>
         </nav>
     </header>
-
+<div class="willHide-div" id="willHide">
     <section class="home-section">
         <h1>Guides</h1>
         <p>Basic guides to help you learn.</p>
@@ -31,20 +46,120 @@
 
     <div class="guide-div">
         <section class="guide-section" id="network-section">
-            <p>NETWORK GUIDE</p>
+            <h2>NETWORK GUIDE</h2><p>Learn the basics of networks</p>
+            <button class="btn-goToGuide" onClick="guideHide('networkGuide', 'willHide')">// Go to Guide</button>
         </section>
 
         <section class="guide-section"  id="file-section" style="left: 400px;">
-            <p>FILE GUIDE</p>
+            <h2>FILE GUIDE</h2><p>Learn the file types and what they do</p>
+            <button class="btn-goToGuide" onClick="guideHide('fileGuide', 'willHide')">// Go to Guide</button>
         </section>
 
         <section class="guide-section"  id="exploit-section" style="left: 800px;">
-            <p>EXPLOIT GUIDE</p>
+            <h2>EXPLOIT GUIDE</h2><p>Learn how exploits work and how to create them</p>
+            <button class="btn-goToGuide" onClick="guideHide('exploitGuide', 'willHide')">// Go to Guide</button>
         </section>
 
         <section class="guide-section"  id="hacking-section" style="left: 1200px;">
-            <p>HACKING GUIDE</p>
+            <h2>HACKING GUIDE</h2><p>Soon</p>
         </section>
     </div>
+</div>
+
+<div class="div-actualGuide" id="networkGuide">
+    <h1>Network Guide</h1>
+    <p> Difficulty Level: BEGINNER </br>
+        Objective of this guide: Acquire a foundational understanding of network fundamentals, including device types, IP addresses, subnets, and port functions within the Grey Hack game environment.
+        Always refer to the manual if you encounter difficulties in comprehension.
+        </br></br>
+        In the game, networks operate similarly to real-life networks, but you don't need real-world experience to grasp the concepts outlined in this guide. Networks involve grouping devices and ensuring secure interactions with other computers. Each network typically has at least one router or one computer, with many including multiple routers, computers, and even CCTV cameras.
+        </br></br>
+        <p><b>Key Concepts:</b>
+        </br>
+        Networks rely on IP addresses, which can be LAN-IPs or Public-IPs. </br>
+        Public-IPs are visible and interactable by every player, while LAN-IPs are restricted to within the network. </br>
+        Routers connect the LAN with the outside world and create "subnets." </br>
+        LAN-IPs are like room addresses inside your home, with Public-IPs representing your home address. </br>
+        Switches are similar to routers but operate within subnets, acting like guards with firewalls. </br>
+        Subnets are groups of devices, similar to different floors in a house. </br></p>
+
+        <p><b>Device Functions:</b>
+        </br>
+        Routers create subnets and may have firewalls, can only execute non-visual programs like Terminal.exe. </br>
+        Switches create subnets and may have firewalls. </br>
+        Computers can run any .exe and do not have their own firewalls. </br>
+        Cameras (CCTV) display video footage in the browser when connected to the right port. </br></br></p>
+        <p><b>Additional Concepts: </b></br>
+        Ports act as individual entrances to a network, with specific functions assigned to each (e.g., SSH, FTP). </br>
+        Standard ports include: </br> 0 = ROUTER | 21 = FTP | 22 = SSH | 25 = SMTP | 80 = HTTP | 141 = BANK ACCOUNT / SQL | 1222 = RSHELL <br> 1542 = REPOSITORY 
+        3306 / 3307 = DATABASE | 37777 = CCTV | 6667 = CHAT | 8080 = FIREWALL AND PORTFORWARD SETTINGS ON ROUTER</br>
+        Ports can be open, closed or not forwarded, impacting exploitability. </br>
+        Only open Ports can be exploited. Port 0 is always open, because its the routers port.
+        Hub devices are used for grouping subnets or individual devices.</br></br>
+        </p>
+</div>
+
+<div class="div-actualGuide" id="fileGuide">
+    <h1>File Guide</h1>
+    <p> Difficulty Level: BEGINNER </br>
+        Objective of this guide: Familiarize yourself with various file types and highlight crucial ones on your system.
+        Always refer to the manual if you encounter difficulties in comprehension. 
+        </br></br>
+        <b>File Types Overview:</b></br></p>
+        <ul id="fileGuideList">
+            <li>.src (source code file): Opened with CodeEditor.exe for script writing.</li> </br>
+            <li>.txt (text file): Opened with Notepad.exe, often used for notes.</li> </br>
+            <li>.log (log file): Opened with LogViewer.exe, contains chatlogs or system logs.</li> </br>
+            <li>.jpg (jpg file): Opened with ImageViewer.exe, may contain sensitive content.</li> </br>
+            <li>.pdf (pdf file): Opened with PDFReader.exe, often part of the in-game storyline.</li> </br>
+            <li>.exe (executable file): Exclusive to computers; exceptions include FileExplorer.exe and Terminal.exe.</li> </br>
+            <li>.bin (binary file "101010" Icon): Cant be opened. </li></br>
+            <li>.bin (binary file "Gear" Icon): Cant be opened but executed, these are usually scripts (Compiled .src).</li></br>
+        </ul>
+        <p>can check the icons in FileExplorer.exe</p>
+        </br></br>
+        <p stlye="font-size: 18px"><b>Understanding Important Files on Your System: </b></p>
+        <p>
+        <b>-</b> /boot and /sys: Essential for system startup and operation. </br> </br>
+        <b>-</b> /etc: Houses three main files: </br>
+        "passwd": Stores passwords, decipherable using the tool from the hackshop. </br>
+        "xorg.conf" and "fstab": Critical for your home computer; deleting them leads to safe mode. </br> 
+        /etc/apt: Contains "sources.txt," storing addresses from your apt-get commands. </br> </br>
+        /lib: Holds all installed libraries, which can be exploited. Install safer libraries to prevent exploiting if possible. </br></br>
+        /var: Contains "system.log", logs connections, disconnections, and file deletions. </br></br>
+        /usr/bin: Stores all your default executables (Visual executables). </br></br>
+        /bin: Contains commands; modify their source code (.src in the manual) for customized outputs. </br></br>
+        /home: Contains user folders (If there are users on the system) and a "guest" folder; each user folder usually has a "Config" folder which contains Mail.txt and Bank.txt.</br></br>
+        /root: Similar to /home/user but only for the root user.</br></br>
+        /server: Exclusive to servers, contains config files for services like SSH.</br></br>
+        /Public: Often found next to /server, contains the HTML file for the server's website.</br></br>
+        </p>
+        
+        <p><b>Additional Information:</b></br>
+        Obtain safer libraries by copying them from hacked systems or purchasing / trading them from players.
+        Config files define system parameters and <i>may</i> contain interesting information.</p>
+</div>
+
+<div class="div-actualGuide" id="exploitGuide">
+    <h1>Exploiting Guide</h1>
+    
+    <p></p>REWRITING THIS GUIDE RIGHT NOW</p>
+</div>
+
+<div class="div-actualGuide" id="hackingGuide">
+    <h1>Hacking Guide</h1>
+    
+    <p></p>REWRITING THIS GUIDE RIGHT NOW</p>
+</div>
+
+<script>
+function guideHide(showThisElementID, hideThisElementID) {
+  var hideThisElement = document.getElementById(hideThisElementID);
+  var showThisElement = document.getElementById(showThisElementID);
+    hideThisElement.style.display = "none";
+    showThisElement.style.display = "block";
+}
+
+</script>
 </body>
 </html>

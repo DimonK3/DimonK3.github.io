@@ -108,22 +108,57 @@ section {
 .guide-div {
     position: relative;
     top: 150px;
-    height: 200px;
+    height: 400px;
     padding: 20px;
-    background-color: #a3a3a3;
+    background-color: #f3f3f3;
 }
 
 .guide-section {
     position: absolute;
-    height: 150px;
-    width: 200px;
+    height: 300px;
+    width: 300px;
     margin-left: 50px;
-    background-color: #365f9b;
+    background-color: rgba(0, 128, 254, 0.5);
     border-style: solid;
     border-width: 1px;
     border-color: rgb(0, 0, 0);
 }
-.guide-section p {
-    font-size: 20px;
+.guide-section h2 {
+    font-size: 25px;
     font-weight: bold;
+}
+.guide-section p {
+    font-size: 16px;
+    font-weight: 120;
+}
+
+.button {
+    position: relative;
+    margin-left: 50px;
+    border: none;
+    padding: 5px 5px;
+}
+
+.btn-goToGuide {
+        position: absolute;
+        bottom: 10px;
+        margin-bottom: 10px;
+        width: 290px;
+        height: 75px;
+        background-color: #3498db;
+        color: white;
+        border: 1px solid;
+        border-radius: 5px;
+        cursor: pointer;
+}
+
+.btn-goToGuide:hover {
+    background-color: #2980b9;
+}
+
+.div-actualGuide {
+    position: absolute;
+    left: 25%;
+    right: 25%;
+    text-align: justify;
 }
