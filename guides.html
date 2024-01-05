@@ -91,8 +91,8 @@
         Switches create subnets and may have firewalls. </br>
         Computers can run any .exe and do not have their own firewalls. </br>
         Cameras (CCTV) display video footage in the browser when connected to the right port. </br></br></p>
-        <p><b>Additional Concepts: </b></br>
-        Ports act as individual entrances to a network, with specific functions assigned to each (e.g., SSH, FTP). </br>
+        <p><b>Additional Concept - Ports: </b></br>
+        Ports act as individual entrances to a network, with specific functions assigned to each port (e.g., SSH, FTP). </br>
         Standard ports include: </br> 0 = ROUTER | 21 = FTP | 22 = SSH | 25 = SMTP | 80 = HTTP | 141 = BANK ACCOUNT / SQL | 1222 = RSHELL <br> 1542 = REPOSITORY 
         3306 / 3307 = DATABASE | 37777 = CCTV | 6667 = CHAT | 8080 = FIREWALL AND PORTFORWARD SETTINGS ON ROUTER</br>
         Ports can be open, closed or not forwarded, impacting exploitability. </br>
@@ -125,7 +125,7 @@
         /boot and /sys: Essential for system startup and operation. </br> </br>
         /etc: Houses three main files: </br>
         "passwd": Stores passwords, decipherable using the tool from the hackshop. </br>
-        "xorg.conf" and "fstab": Critical for your home computer; deleting them leads to safe mode. </br> 
+        "xorg.conf": Critical for your home computer; deleting it leads to safe mode. </br> 
         /etc/apt: Contains "sources.txt," storing addresses from your apt-get commands. </br> </br>
         /lib: Holds all installed libraries, which can be exploited. Install safer libraries to prevent exploiting if possible. </br></br>
         /var: Contains "system.log", logs connections, disconnections, and file deletions. </br></br>
@@ -167,14 +167,19 @@
         This prints out exploitable memory zones with their respective dependencies.
         The final step involves exploiting these vulnerabilities using <span style="color: white; background-color: black;">resultVariable = metaLibVariable.overflow(memoryVariable.key, stringVariable)</span>.
         If successful it will return an object, indicating the success of your exploit. The object may represent a shell, file, computer object, or a number. 
-        In the case of a number, it signifies either the firewall's disabling (if used on port 0) or a potential password change (if used on a different port). Remember to include a third parameter in the .overflow method for the new password.
+        In the case of a number, it signifies either the firewall's disabling (if used on port 0) or a potential password change (if used on a different port). Remember to include a third parameter in the .overflow method for the new password. </br>
+        
+        </br><b>Closed port computers:</b></br>
+        You cant directly exploit computers with closed ports. Instead, exploit the router above the target computer to get a computer object. 
+        With this object, you can retrieve the Mail.txt from any user on the target computer. 
+        Grab an email from another user in the same network, send an email with an rshell attachment to the target computer's email, and then open your rshell interface to listen for incoming connections.
         </p></br>
         <p><b>Abusing the vulnerabilities: </b></br>
             Various returned objects serve distinct purposes, outlined as follows:</br>
             <ul id="exploitGuideList">
-            <li>Shell: Establish a connection to a guest, non-root user, or root shell on the target device.</li></br>
-            <li>Computer: Enables reading or writing files.</li></br>
-            <li>File: Represents either a folder or an actual file. For files, the file content can be read, while folders can show their sub folders and files.</li></br>
+            <li>Shell: Establish a shell connection to a guest, non-root user, or root shell on the target device.</li></br>
+            <li>Computer: Enables you to do everything in the manual under "Computer".</li></br>
+            <li>File: Enables  you to do everything in the manual under "File".</li></br>
             <li>Number: Used to either disable the firewall or change the password.</li></br>
             </ul>
         </p>
@@ -182,7 +187,7 @@
         <p><b>Additional Information:</b></br>
             This guide covers a fundamental and straightforward approach to coding exploits. </br>
             While there are numerous ways to enhance functionality and aesthetics, these are intentionally omitted to maintain brevity and encourage players to explore and solve challenges independently.</br>
-            To enhance your script and gain a deeper understanding, read up on "File", "Computer", "Shell", "Metaxploit" or "Metalib" in the in-game mnual.</p>
+            To enhance your script and gain a deeper understanding, read up on "File", "Computer", "Shell", "Metaxploit" and "Metalib" in the in-game mnual.</p>
     </div>
 
     <div class="div-actualGuide" id="scriptingGuide">
