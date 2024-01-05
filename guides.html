@@ -57,8 +57,8 @@
             </div>
 
             <div class="guide-div"  id="hacking-section" >
-                <h2>SCRIPTING GUIDE</h2><p>Publish Date: 05.01.2024@15:00-21:00 GMT</p>
-                <!-- <button class="btn-goToGuide" onClick="guideHide('exploitGuide', 'willHide')">// Go to Guide</button> -->
+                <h2>SCRIPTING GUIDE</h2><p>Basic principles of coding</p>
+                <button class="btn-goToGuide" onClick="guideHide('scriptingGuide', 'willHide')" style="top: 765px;">// Go to Scripting Guide</button>
             </div>
 
             <div class="guide-div"  id="hacking-section" >
@@ -146,10 +146,10 @@
         <h1>Exploiting Guide</h1>
         
         <p>Difficulty Level: BEGINNER </br>
-        <p>Objective of this guide: This guide is designed to help you understand how Metaxploit and Metalib work and use that knowledge to create tools for accessing networks. 
-            Throughout the guide, you'll find straightforward examples to illustrate how to effectively use Metasploit and Metalib for building reliable network access tools.
-        </br></br>
-        <b>Preface: </b></br>
+        Objective of this guide: This guide is designed to help you understand how Metaxploit and Metalib work and use that knowledge to create tools for accessing networks. 
+        Throughout the guide, you'll find straightforward examples to illustrate how to effectively use Metasploit and Metalib for building reliable network access tools.</p>
+        </br>
+        <p><b>Preface: </b></br>
         It is strongly advised to familiarize yourself with the scripting guide and networks guide before delving into this tutorial.</br>
         Replace every xVariable you encounter with the preferred variable name. </p>
         <p><b>Scripting the exploit: </b></br>
@@ -185,10 +185,60 @@
             To enhance your script and gain a deeper understanding, read up on "File", "Computer", "Shell", "Metaxploit" or "Metalib" in the in-game mnual.</p>
     </div>
 
-    <div class="div-actualGuide" id="hackingGuide">
-        <h1>Hacking Guide</h1>
-        
-        <p></p>REWRITING THIS GUIDE RIGHT NOW</p>
+    <div class="div-actualGuide" id="scriptingGuide">
+        <h1>SCRIPTING GUIDE</h1>
+        <p>Notes@5:30am: This is the first version of the scripting guide, I will further update this soon. </br></br>
+        Difficulty Level: BEGINNER</br>
+        Objective of this guide: This guide aims to provide novice programmers with a comprehensive understanding of the principles of GreyScript, focusing on objects and methods in coding.
+        By providing clear explanations and practical examples, you will gain the foundational knowledge needed to navigate GreyScript with ease.
+        </br></br>
+        <b>Preface:</b>
+        This guide is a short and simplified form of the scripting manual in game. If you do not understand any words or phrases, use the manual to look up their in-depth explanation.</p>
+
+        <p><b>General programming basics:</b>
+        In programming, there are things called “Objects” and “Methods”. You can think of objects as things, one example would be a car and think of methods like actions related to those objects. 
+        The object “car” could have methods like “start” or “accelerate”. To call a method from an object, you use the syntax Object.Method(). 
+        The difference between methods and functions is that methods are associated to an object, while functions are not.
+        Functions are an essential tool in programming to prevent repetitive code. If you have to compare the same value every 12 lines, then it would make sense to use a function for that instead of separate if-querys.
+        Every programming language has something called variables. Variables are just things you assign to something. 
+        Variables can be named whatever you want them to be named. For example, we could assign a variable which is called “password” to the number 42. 
+        Variables also have a data type. Data types assign everything a type. The variable 42 would be a “Integer”, the variable “password” would be a String. All data types have built in functions.
+        Every programming language also has a syntax. The word syntax simply refers to the structure of the programming language.</p>
+
+        <p><b>GreyScript basics:</b>
+        In GreyScript the syntax is quite simple compared to other programming languages. GreyScript does not use semicolons at the end of each statement or curly braces. 
+        These curly braces usually mark a code-block. In GreyScript, each codeblock starts with a keyword like if or for. Unlike other programming languages. 
+        However, there is basically no difference between maps, objects, and classes in GreyScript. Also keep in mind that there are globally and locally scoped variables. 
+        Access a global variable with the globals. prefix. Also keep in mind that GreyScript is case-sensitive.
+        To control the flow of your code, there are so-called “if”, “while” and “for” loops. These loops check for a value and then either execute the code inside the loop or skip the code. Lets create an example: </br>
+        Lets say your favorite number is 7. You want to create a function which starts at 0 and counts up once every iteration and stops once your favorite number is reached. 
+        rightNumber = false // Declare rightNumber as false to start while-loop
+        favNumber = 7 // Declare your favorite number
+        currentNumber = 0 // Declare the starting digit for currentNumber
+        while rightNumber == false
+            if currentNumber == favNumber then // Check if the currentNumber equals favNumber
+                print("Right number")
+                rightNumber = true // Set rightNumber to true so the while-loop stops
+            else // If the currentNumber does not equal favNumber
+                print("Wrong number")
+            end if
+            currentNumber = currentNumber +1 // Count up +1
+        end while
+        Try to experiment with this code and change the values! Try and guess the outcome.
+        In this code, we used two different kinds of data types. We used Booleans which can either be true or false and we used Integers. 
+        We also used different kinds of mathematical symbols. “=” assigns something, and “==” compares something. The output would be 7 prints that each say “Wrong Number” and the 8th would say “Right Number”.
+        </br></br>
+        <b>Advanced objects in GreyScript:</b>
+        There are many objects that you could use or get returned in your code. To explain these, we will use “File” as an example. The file object can be used with any of its methods. If you want to delete a file you would simply do File(filePath).delete
+        In some cases, you might be required to use these objects and their methods in connection with other objects. If you obtain access to a device by using the “Computer” object, you can use any method from the file object in connection with that. To check if you can combine objects, check the object in the scripting manual. The computer object has “File” listed as a “method”, which indicates that you can use it in combination with the computer object.
+        </br></br>
+        <b>General tips and troubleshooting:</b>
+        Always make sure to check the manual if you encounter issues. Even for issues that are not coding-related, there usually is an entry in the manual about it.</br>
+        Every error you get has a description. Make use of that description. If the error says “Missing RParen line:” that would indicate a missing " in the line. 
+        If you dont understand what the error message is saying, google it. For example, you could google “RParen” to find out what it is if you are unsure.</br>
+        Common issues include things like variables in the wrong scope, missing characters or wrong types, make sure to check for these. </br>
+        Grey Hack uses the CodeEditor.exe to write code, however I recommend using VSCode with the “GreyScript” extension to write the code and then copy-pasting the written code into the game. </br>
+        Its also important to comment and document your code to better understand it when reading and troubleshooting. This will save you a lot of time.</p>
     </div>
     
     <script src="script.js"></script>
