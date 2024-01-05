@@ -52,8 +52,8 @@
         </div>
         <div class="guideButtonsBottom-div">
             <div class="guide-div"  id="hacking-section" >
-                <h2>HACKING GUIDE</h2><p>Publish Date: 05.01.2024@15:00-21:00 GMT</p>
-                <!-- <button class="btn-goToGuide" onClick="guideHide('exploitGuide', 'willHide')">// Go to Guide</button> -->
+                <h2>HACKING GUIDE</h2><p>Basic principles of hacking</p>
+                <button class="btn-goToGuide" onClick="guideHide('hackingGuide', 'willHide')"style="top: 765px;">// Go to Hacking Guide</button>
             </div>
 
             <div class="guide-div"  id="hacking-section" >
@@ -62,7 +62,7 @@
             </div>
 
             <div class="guide-div"  id="hacking-section" >
-                <h2>CRYPTO GUIDE</h2><p>In Planning</p>
+                <h2>CRYPTO GUIDE</h2><p>Soon</p>
                 <!-- <button class="btn-goToGuide" onClick="guideHide('exploitGuide', 'willHide')">// Go to Guide</button> -->
             </div>
         </div>
@@ -192,7 +192,7 @@
 
     <div class="div-actualGuide" id="scriptingGuide">
         <h1>SCRIPTING GUIDE</h1>
-        <p>Notes@5:30am: This is the first version of the scripting guide, I will further update this soon. </br></br>
+        <p>
         Difficulty Level: BEGINNER</br>
         Objective of this guide: This guide aims to provide novice programmers with a comprehensive understanding of the principles of GreyScript, focusing on objects and methods in coding.
         By providing clear explanations and practical examples, you will gain the foundational knowledge needed to navigate GreyScript with ease.
@@ -246,6 +246,31 @@
         Its also important to comment and document your code to better understand it when reading and troubleshooting. This will save you a lot of time.</p>
     </div>
     
+    <div class="div-actualGuide" id="hackingGuide">
+        <h1>HACKING GUIDE</h1>
+        <p>Difficulty Level: BEGINNER </br>
+        Objective of this guide: Acquaint beginners with various approaches to hacking networks. Teach fundamental principles like social engineering and deleting traces. </br>
+        </br>
+        <b>General principles:</b> </br>
+        To see the name and email of the system administrator, use the whois command. 
+        You can check the IP address of a domain with <span style="color: white; background-color: black;">nslookup www.example.com</span> or if you already have an IP address, simply nmap the IP address.
+        Always make sure to erase any traces you have left. System administrators will trace your IP back to your home computer if you do not do this. To stop them from tracing you, delete any “shell-obtained” log in the system.log file. 
+        Every connection you establish is logged in the system.log. This means that even just connecting to other players websites shows them your IP and the port which you have established the connection on.
+        </br></br>
+        <b>Social Engineering:</b> </br>
+        Employ social engineering strategically to achieve your goals. For obtaining credentials, send a "Login Issues" email to the system administrator of the target network. 
+        Social engineering can yield vital information, including passwords and library versions, or even grant reverse shell access. 
+        Prompt system administrators to update libraries through the "Outdated library found" email, potentially providing access to the network.
+        </br></br>
+        <b>Port hacking:</b> </br>
+        To hack into networks and devices using ports, you need a public IP address. After acquiring the IP address, you have to  <span style="color: white; background-color: black;">nmap</span> the network to check the open ports. 
+        If there are no ports open, scan the router with the <span style="color: white; background-color: black;">scanrouter</span> command for the kernel_router.so version.
+        You are now left with either open ports or the router port. 
+        If you find any open port, make sure to either check the hackshop for exploits for that particular library version, or create your own tool to scan and exploit. 
+        However, if there are no open ports you will have to exploit the router (port 0). Once you gain access to the router, you can further escalate onto other devices in the LAN.</p>
+    </div>
+
+
     <script src="script.js"></script>
 </body>
 </html>
