@@ -23,6 +23,7 @@
             </ul>
         </nav>
     </header>
+
     <div class="willHide-div" id="willHide">
         <section class="home-section">
             <h1>Guides</h1>
@@ -33,25 +34,37 @@
             <p>Here you can find all the guides I have published. </br>Topics include many important things like networks or exploits.</p>
         </section>
 
-        <div class="guide-div">
-            <section class="guide-section" id="network-section">
+        <div class="guideButtons-div">
+            <div class="guide-div" id="network-section" >
                 <h2>NETWORK GUIDE</h2><p>Learn the basics of networks</p>
-                <button class="btn-goToGuide" onClick="guideHide('networkGuide', 'willHide')">// Go to Guide</button>
-            </section>
+                <button class="btn-goToGuide" onClick="guideHide('networkGuide', 'willHide')">// Go to Network Guide</button>
+            </div>
 
-            <section class="guide-section"  id="file-section" style="left: 400px;">
+            <div class="guide-div"  id="file-section" >
                 <h2>FILE GUIDE</h2><p>Learn the file types and what they do</p>
-                <button class="btn-goToGuide" onClick="guideHide('fileGuide', 'willHide')">// Go to Guide</button>
-            </section>
+                <button class="btn-goToGuide" onClick="guideHide('fileGuide', 'willHide')">// Go to File Guide</button>
+            </div>
 
-            <section class="guide-section"  id="exploit-section" style="left: 800px;">
+            <div class="guide-div"  id="exploit-section" >
                 <h2>EXPLOIT GUIDE</h2><p>Learn how exploits work and how to create them</p>
-                <button class="btn-goToGuide" onClick="guideHide('exploitGuide', 'willHide')">// Go to Guide</button>
-            </section>
+                <button class="btn-goToGuide" onClick="guideHide('exploitGuide', 'willHide')">// Go to Exploit Guide</button>
+            </div>
+        </div>
+        <div class="guideButtonsBottom-div">
+            <div class="guide-div"  id="hacking-section" >
+                <h2>HACKING GUIDE</h2><p>Publish Date: 05.01.2024@15:00-21:00 GMT</p>
+                <!-- <button class="btn-goToGuide" onClick="guideHide('exploitGuide', 'willHide')">// Go to Guide</button> -->
+            </div>
 
-            <section class="guide-section"  id="hacking-section" style="left: 1200px;">
-                <h2>HACKING GUIDE</h2><p>Soon</p>
-            </section>
+            <div class="guide-div"  id="hacking-section" >
+                <h2>SCRIPTING GUIDE</h2><p>Publish Date: 05.01.2024@15:00-21:00 GMT</p>
+                <!-- <button class="btn-goToGuide" onClick="guideHide('exploitGuide', 'willHide')">// Go to Guide</button> -->
+            </div>
+
+            <div class="guide-div"  id="hacking-section" >
+                <h2>CRYPTO GUIDE</h2><p>In Planning</p>
+                <!-- <button class="btn-goToGuide" onClick="guideHide('exploitGuide', 'willHide')">// Go to Guide</button> -->
+            </div>
         </div>
     </div>
 
@@ -156,7 +169,7 @@
         If successful it will return an object, indicating the success of your exploit. The object may represent a shell, file, computer object, or a number. 
         In the case of a number, it signifies either the firewall's disabling (if used on port 0) or a potential password change (if used on a different port). Remember to include a third parameter in the .overflow method for the new password.
         </p></br>
-        <p><b>Abusing the results: </b></br>
+        <p><b>Abusing the vulnerabilities: </b></br>
             Various returned objects serve distinct purposes, outlined as follows:</br>
             <ul id="exploitGuideList">
             <li>Shell: Establish a connection to a guest, non-root user, or root shell on the target device.</li></br>
