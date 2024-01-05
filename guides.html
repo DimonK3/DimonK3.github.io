@@ -157,16 +157,19 @@
         In the case of a number, it signifies either the firewall's disabling (if used on port 0) or a potential password change (if used on a different port). Remember to include a third parameter in the .overflow method for the new password.
         </p></br>
         <p><b>Abusing the results: </b></br>
-            The different type of objects that get returned have different usages. They are as following: </br>
-            Shell -> Connect to guest, non-root-user or root shell on target device.</br>
-            Computer -> Read or write file.</br>
-            File -> File can be a folder or actual file. If its a file, you can read the contents, for folders you can get the files in that folder.</br>
-            Number -> Disable either firewall or change password.</br>
+            Various returned objects serve distinct purposes, outlined as follows:</br>
+            <ul id="exploitGuideList">
+            <li>Shell: Establish a connection to a guest, non-root user, or root shell on the target device.</li></br>
+            <li>Computer: Enables reading or writing files.</li></br>
+            <li>File: Represents either a folder or an actual file. For files, the file content can be read, while folders can show their sub folders and files.</li></br>
+            <li>Number: Used to either disable the firewall or change the password.</li></br>
+            </ul>
         </p>
 
         <p><b>Additional Information:</b></br>
             This guide covers a fundamental and straightforward approach to coding exploits. </br>
-            While there are numerous ways to enhance functionality and aesthetics, these are intentionally omitted to maintain brevity and encourage players to explore and solve challenges independently.</p>
+            While there are numerous ways to enhance functionality and aesthetics, these are intentionally omitted to maintain brevity and encourage players to explore and solve challenges independently.</br>
+            To enhance your script and gain a deeper understanding, read up on "File", "Computer", "Shell", "Metaxploit" or "Metalib" in the in-game mnual.</p>
     </div>
 
     <div class="div-actualGuide" id="hackingGuide">
