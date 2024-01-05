@@ -8,17 +8,6 @@
     <style>
         .div-actualGuide { display: none; } 
         .div-actualGuide { margin-bottom: 50px; } 
-
-        /* .fileGuideList {
-            list-style-type: none;
-            padding: 0;
-            border: 1px solid #ddd;
-        }
-
-        .fileGuideList li {
-            padding: 8px 16px;
-            border-bottom: 1px solid #ddd;
-        } */
     </style>
 </head>
 <body>
@@ -120,8 +109,8 @@
         </br></br>
         <p stlye="font-size: 18px"><b>Understanding Important Files on Your System: </b></p>
         <p>
-        <b>-</b> /boot and /sys: Essential for system startup and operation. </br> </br>
-        <b>-</b> /etc: Houses three main files: </br>
+        /boot and /sys: Essential for system startup and operation. </br> </br>
+        /etc: Houses three main files: </br>
         "passwd": Stores passwords, decipherable using the tool from the hackshop. </br>
         "xorg.conf" and "fstab": Critical for your home computer; deleting them leads to safe mode. </br> 
         /etc/apt: Contains "sources.txt," storing addresses from your apt-get commands. </br> </br>
@@ -143,7 +132,33 @@
     <div class="div-actualGuide" id="exploitGuide">
         <h1>Exploiting Guide</h1>
         
-        <p></p>REWRITING THIS GUIDE RIGHT NOW</p>
+        <p>Difficulty Level: BEGINNER </br>
+        <p>Objective of this guide: This guide is designed to help you understand how Metaxploit and Metalib work and use that knowledge to create tools for accessing networks. 
+            Throughout the guide, you'll find straightforward examples to illustrate how to effectively use Metasploit and Metalib for building reliable network access tools.
+        </br></br>
+        <b>Preface: </b></br>
+        It is strongly advised to familiarize yourself with the scripting guide and networks guide before delving into this tutorial.</br>
+        Replace every xVariable you encounter with the preferred variable name. </p>
+        <p><b>Scripting the exploit: </b></br>
+        To gain access to computers, routers, or switches, exploiting their vulnerabilities is essential. This is achieved through scripting, particularly using the Metaxploit and Metalib objects, as detailed in the Manual under Scripting.</br></br>
+        There are distinct categories of libraries: local and remote. Local libraries, such as net.so, init.so, and kernel_module.so, can only be exploited locally,
+         while remote libraries are exploitable from a different computer or network, keep in mind that remote libraries are always linked to a port. </br></br>
+        To initiate the script, you need the metaxploit.so library. Achieve this by employing the following command: 
+        <span style="color: white; background-color: black;">metaxploitVariable = include_lib("pathToLib")</span>, where "pathToLib" represents the path to your metaxploit.so library. </br></br>
+        After this setup, assign variables to the IP address and respective port you wish to target. A common approach is to use <span style="color: white; background-color: black;">ipVariable = params[0]</span> 
+        and <span style="color: white; background-color: black;">portVariable = params[1]</span>. Params are values post-command (e.g “exploit address port”). </br></br>
+        The subsequent steps depend on the type of device you aim to attack. For devices beyond your LAN, employ the net_use method: <span style="color: white; background-color: black;">metaxploitVariable.net_use(ipVariable, portVariable).</span> </br></br>
+        Now, the program needs to identify the library to scan. Define the library using <span style="color: white; background-color: black;">metaLibVariable = net_session.dump_lib.</span> </br></br>
+        Proceed to scan the library with <span style="color: white; background-color: black;">listVariable = metaxploitVariable.scan(metaLibVariable)</span>. This generates a list containing various memory zones.  </br></br>
+        Select the zone for investigation and execute the following: <span style="color: white; background-color: black;">print(metaxploitVariable.scan_address(metaLibVariable, memoryVariable))</span>. 
+        This prints out exploitable memory zones with their respective dependencies.
+        The final step involves exploiting these vulnerabilities using <span style="color: white; background-color: black;">resultVariable = metaLibVariable.overflow(memoryVariable.key, stringVariable)</span>.
+        If successful it will return an object, indicating the success of your exploit. The object may represent a shell, file, computer object, or a number. 
+        In the case of a number, it signifies either the firewall's disabling (if used on port 0) or a potential password change (if used on a different port). Remember to include a third parameter in the .overflow method for the new password.
+        </p></br>
+        <p><b>Additional Information:</b></br>
+            This guide covers a fundamental and straightforward approach to coding exploits. </br>
+            While there are numerous ways to enhance functionality and aesthetics, these are intentionally omitted to maintain brevity and encourage players to explore and solve challenges independently.</p>
     </div>
 
     <div class="div-actualGuide" id="hackingGuide">
