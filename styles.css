@@ -33,7 +33,7 @@ nav ul li a:hover {
 
 .banner {
     position: relative;
-    background: url('banner-image.jpg') no-repeat center center;
+    background: url('banner-image.png') no-repeat center center;
     background-size: cover;
     height: 60vh;
     color: white;
