@@ -1,0 +1,215 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    font-size: 45px;
+    text-align: center;
+}
+
+p {
+    font-size: 20px;
+
+}
+header {
+    background-color: rgba(0,40,72, 1);
+    padding: 10px;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: rgba(0,40,72, 1);
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Display items horizontally */
+}
+
+.navbar li {
+    float: left;
+}
+
+.navbar a {
+    font-weight: bold;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    font-size: 20px;
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+.navbar-title a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    background-color: rgba(1, 60, 109, 0.3);
+}
+
+section {
+    padding: 20px;
+}
+
+.home-section {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.home-section h1 {
+    color: #3d3d3d;
+}
+
+.home-section p {
+    color: #555;
+    text-align: center;
+}
+
+.about-section {
+    background-color: #f4f4f4;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-section h1 {
+    color: #3d3d3d;
+}
+
+.about-section p {
+    color: #555;
+    text-align: center;
+}
+
+.below-section {
+    position: absolute;
+    /* background-color: #00ff15; */
+    left: 25%;
+    right: 25%;
+    width: 50%;
+    height: 100px;
+    width: 50%;
+    text-align: center;
+}
+.guideButtonsBottom-div {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 50px; /* Adjust this margin value as needed */
+    margin-top: 5px;
+    padding: 5px;
+}
+
+.guideButtons-div {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 50px;
+    margin-top: 150px;
+    padding: 5px; 
+}
+.guide-div {
+    top: 100px;
+    width: 400px;
+    height: 175px;
+    padding: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: #3498db;
+    color: white;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    
+}
+.btn-goToGuide {
+    position: absolute;
+    top: 555px;
+    width: 280px;
+    height: 55px;
+    font-size: 18px;
+    background-color: #3498db;
+    color: white;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.guide-div h2 {
+    font-size: 25px;
+    font-weight: bold;
+}
+.guide-div p {
+    font-size: 16px;
+    font-weight: 120;
+}
+
+.button {
+    position: relative;
+    margin-left: 50px;
+    border: none;
+    padding: 5px 5px;
+}
+
+.btn-goToGuide:hover {
+    background-color: #2980b9;
+}
+
+.div-actualGuide {
+    position: absolute;
+    left: 15%;
+    right: 15%;
+    text-align: justify;
+}
+
+.quickgo-section {
+    position: absolute;
+    top: 450px;
+    width: 100%;
+    height: 550px;
+    background-color: #0d3a58;
+    color: white;
+}
+
+.quickgo-section h1 {
+    /* position: absolute; */
+    margin-top: 5px;
+    text-align: center;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 50px; /* Adjust this margin value as needed */
+    margin-top: 25px;
+}
+
+.btn-quickGo {
+    /* position: absolute; */
+    top: 100px;
+    width: 400px;
+    height: 150px;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: #3498db;
+    color: white;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn-quickGo:hover {
+    background-color: rgb(24, 58, 168);
+}

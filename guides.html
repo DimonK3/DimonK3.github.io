@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Guides</title>
+    <style>
+        .div-actualGuide { display: none; } 
+        .div-actualGuide { margin-bottom: 50px; } 
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-title">
+                <a href="index.html">Grey Hack Guides</a>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="guides.html">Guides</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="willHide-div" id="willHide">
+        <section class="home-section">
+            <h1>Guides</h1>
+            <p>Basic guides to help you learn.</p>
+        </section>
+
+        <section class="below-section">
+            <p>Here you can find all the guides I have published. </br>Topics include many important things like networks or exploits.</p>
+        </section>
+
+        <div class="guideButtons-div">
+            <div class="guide-div" id="network-section" >
+                <h2>NETWORK GUIDE</h2><p>Learn the basics of networks</p>
+                <button class="btn-goToGuide" onClick="guideHide('networkGuide', 'willHide')">// Go to Network Guide</button>
+            </div>
+
+            <div class="guide-div"  id="file-section" >
+                <h2>FILE GUIDE</h2><p>Learn the file types and what they do</p>
+                <button class="btn-goToGuide" onClick="guideHide('fileGuide', 'willHide')">// Go to File Guide</button>
+            </div>
+
+            <div class="guide-div"  id="exploit-section" >
+                <h2>EXPLOIT GUIDE</h2><p>Learn how exploits work and how to create them</p>
+                <button class="btn-goToGuide" onClick="guideHide('exploitGuide', 'willHide')">// Go to Exploit Guide</button>
+            </div>
+        </div>
+        <div class="guideButtonsBottom-div">
+            <div class="guide-div"  id="hacking-section" >
+                <h2>HACKING GUIDE</h2><p>Basic principles of hacking</p>
+                <button class="btn-goToGuide" onClick="guideHide('hackingGuide', 'willHide')"style="top: 765px;">// Go to Hacking Guide</button>
+            </div>
+
+            <div class="guide-div"  id="hacking-section" >
+                <h2>SCRIPTING GUIDE</h2><p>Basic principles of coding</p>
+                <button class="btn-goToGuide" onClick="guideHide('scriptingGuide', 'willHide')" style="top: 765px;">// Go to Scripting Guide</button>
+            </div>
+
+            <div class="guide-div"  id="hacking-section" >
+                <h2>CRYPTO GUIDE</h2><p>Soon</p>
+                <!-- <button class="btn-goToGuide" onClick="guideHide('exploitGuide', 'willHide')">// Go to Guide</button> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="div-actualGuide" id="networkGuide">
+    <h1>Network Guide</h1>
+    <p> Difficulty Level: BEGINNER </br>
+        Objective of this guide: Acquire a foundational understanding of network fundamentals, including device types, IP addresses, subnets, and port functions within the Grey Hack game environment.
+        Always refer to the manual if you encounter difficulties in comprehension.
+        </br></br>
+        In the game, networks operate similarly to real-life networks, but you don't need real-world experience to grasp the concepts outlined in this guide. Networks involve grouping devices and ensuring secure interactions with other computers. Each network typically has at least one router or one computer, with many including multiple routers, computers, and even CCTV cameras.
+        </br></br>
+        <p><b>Key Concepts:</b>
+        </br>
+        Networks rely on IP addresses, which can be LAN-IPs or Public-IPs. </br>
+        Public-IPs are visible and interactable by every player, while LAN-IPs are restricted to within the network. </br>
+        Routers connect the LAN with the outside world and create "subnets." </br>
+        LAN-IPs are like room addresses inside your home, with Public-IPs representing your home address. </br>
+        Switches are similar to routers but operate within subnets, acting like guards with firewalls. </br>
+        Subnets are groups of devices, similar to different floors in a house. </br></p>
+
+        <p><b>Device Functions:</b>
+        </br>
+        Routers create subnets and may have firewalls, can only execute non-visual programs like Terminal.exe. </br>
+        Switches create subnets and may have firewalls. </br>
+        Computers can run any .exe and do not have their own firewalls. </br>
+        Cameras (CCTV) display video footage in the browser when connected to the right port. </br></br></p>
+        <p><b>Additional Concept - Ports: </b></br>
+        Ports act as individual entrances to a network, with specific functions assigned to each port (e.g., SSH, FTP). </br>
+        Standard ports include: </br> 0 = ROUTER | 21 = FTP | 22 = SSH | 25 = SMTP | 80 = HTTP | 141 = BANK ACCOUNT / SQL | 1222 = RSHELL <br> 1542 = REPOSITORY 
+        3306 / 3307 = DATABASE | 37777 = CCTV | 6667 = CHAT | 8080 = FIREWALL AND PORTFORWARD SETTINGS ON ROUTER</br>
+        Ports can be open, closed or not forwarded, impacting exploitability. </br>
+        Only open Ports can be exploited. Port 0 is always open, because its the routers port.
+        Hub devices are used for grouping subnets or individual devices.</br></br>
+        </p>
+    </div>
+
+    <div class="div-actualGuide" id="fileGuide">
+        <h1>File Guide</h1>
+        <p> Difficulty Level: BEGINNER </br>
+        Objective of this guide: Familiarize yourself with various file types and highlight crucial ones on your system.
+        Always refer to the manual if you encounter difficulties in comprehension. 
+        </br></br>
+        <b>File Types Overview:</b></br></p>
+        <ul id="fileGuideList">
+            <li>.src (source code file): Opened with CodeEditor.exe for script writing.</li> </br>
+            <li>.txt (text file): Opened with Notepad.exe, often used for notes.</li> </br>
+            <li>.log (log file): Opened with LogViewer.exe, contains chatlogs or system logs.</li> </br>
+            <li>.jpg (jpg file): Opened with ImageViewer.exe, may contain sensitive content.</li> </br>
+            <li>.pdf (pdf file): Opened with PDFReader.exe, often part of the in-game storyline.</li> </br>
+            <li>.exe (executable file): Exclusive to computers; exceptions include FileExplorer.exe and Terminal.exe.</li> </br>
+            <li>.bin (binary file "101010" Icon): Cant be opened. </li></br>
+            <li>.bin (binary file "Gear" Icon): Cant be opened but executed, these are usually scripts (Compiled .src).</li></br>
+        </ul>
+        <p>You can check the icons in FileExplorer.exe</p>
+        </br></br>
+        <p stlye="font-size: 18px"><b>Understanding Important Files on Your System: </b></p>
+        <p>
+        /boot and /sys: Essential for system startup and operation. </br> </br>
+        /etc: Houses three main files: </br>
+        "passwd": Stores passwords, decipherable using the tool from the hackshop. </br>
+        "xorg.conf": Critical for your home computer; deleting it leads to safe mode. </br> 
+        /etc/apt: Contains "sources.txt," storing addresses from your apt-get commands. </br> </br>
+        /lib: Holds all installed libraries, which can be exploited. Install safer libraries to prevent exploiting if possible. </br></br>
+        /var: Contains "system.log", logs connections, disconnections, and file deletions. </br></br>
+        /usr/bin: Stores all your default executables (Visual executables). </br></br>
+        /bin: Contains commands; modify their source code (.src in the manual) for customized outputs. </br></br>
+        /home: Contains user folders (If there are users on the system) and a "guest" folder; each user folder usually has a "Config" folder which contains Mail.txt and Bank.txt.</br></br>
+        /root: Similar to /home/user but only for the root user.</br></br>
+        /server: Exclusive to servers, contains config files for services like SSH.</br></br>
+        /Public: Often found next to /server, contains the HTML file for the server's website.</br></br>
+        </p>
+        
+        <p><b>Additional Information:</b></br>
+        Obtain safer libraries by copying them from hacked systems or purchasing / trading them from players.
+        Config files define system parameters and <i>may</i> contain interesting information.</p>
+    </div>
+
+    <div class="div-actualGuide" id="exploitGuide">
+        <h1>Exploiting Guide</h1>
+        
+        <p>Difficulty Level: BEGINNER </br>
+        Objective of this guide: This guide is designed to help you understand how Metaxploit and Metalib work and use that knowledge to create tools for accessing networks. 
+        Throughout the guide, you'll find straightforward examples to illustrate how to effectively use Metasploit and Metalib for building reliable network access tools.</p>
+        </br>
+        <p><b>Preface: </b></br>
+        It is strongly advised to familiarize yourself with the scripting guide and networks guide before delving into this tutorial.</br>
+        Replace every xVariable you encounter with the preferred variable name. </p>
+        <p><b>Scripting the exploit: </b></br>
+        To gain access to computers, routers, or switches, exploiting their vulnerabilities is essential. This is achieved through scripting, particularly using the Metaxploit and Metalib objects, as detailed in the Manual under Scripting.</br></br>
+        There are distinct categories of libraries: local and remote. Local libraries, such as net.so, init.so, and kernel_module.so, can only be exploited locally,
+         while remote libraries are exploitable from a different computer or network, keep in mind that remote libraries are always linked to a port. </br></br>
+        To initiate the script, you need the metaxploit.so library. Achieve this by employing the following command: 
+        <span style="color: white; background-color: black;">metaxploitVariable = include_lib("pathToLib")</span>, where "pathToLib" represents the path to your metaxploit.so library. </br></br>
+        After this setup, assign variables to the IP address and respective port you wish to target. A common approach is to use <span style="color: white; background-color: black;">ipVariable = params[0]</span> 
+        and <span style="color: white; background-color: black;">portVariable = params[1]</span>. Params are values post-command (e.g “exploit address port”). </br></br>
+        The subsequent steps depend on the type of device you aim to attack. For devices beyond your LAN, employ the net_use method: <span style="color: white; background-color: black;">metaxploitVariable.net_use(ipVariable, portVariable).</span> </br></br>
+        Now, the program needs to identify the library to scan. Define the library using <span style="color: white; background-color: black;">metaLibVariable = net_session.dump_lib.</span> </br></br>
+        Proceed to scan the library with <span style="color: white; background-color: black;">listVariable = metaxploitVariable.scan(metaLibVariable)</span>. This generates a list containing various memory zones.  </br></br>
+        Select the zone for investigation and execute the following: <span style="color: white; background-color: black;">print(metaxploitVariable.scan_address(metaLibVariable, memoryVariable))</span>. 
+        This prints out exploitable memory zones with their respective dependencies.
+        The final step involves exploiting these vulnerabilities using <span style="color: white; background-color: black;">resultVariable = metaLibVariable.overflow(memoryVariable.key, stringVariable)</span>.
+        If successful it will return an object, indicating the success of your exploit. The object may represent a shell, file, computer object, or a number. 
+        In the case of a number, it signifies either the firewall's disabling (if used on port 0) or a potential password change (if used on a different port). Remember to include a third parameter in the .overflow method for the new password. </br>
+        
+        </br><b>Closed port computers:</b></br>
+        You cant directly exploit computers with closed ports. Instead, exploit the router above the target computer to get a computer object. 
+        With this object, you can retrieve the Mail.txt from any user on the target computer. 
+        Grab an email from another user in the same network, send an email with an rshell attachment to the target computer's email, and then open your rshell interface to listen for incoming connections.
+        </p></br>
+        <p><b>Abusing the vulnerabilities: </b></br>
+            Various returned objects serve distinct purposes, outlined as follows:</br>
+            <ul id="exploitGuideList">
+            <li>Shell: Establish a shell connection to a guest, non-root user, or root shell on the target device.</li></br>
+            <li>Computer: Enables you to do everything in the manual under "Computer".</li></br>
+            <li>File: Enables  you to do everything in the manual under "File".</li></br>
+            <li>Number: Used to either disable the firewall or change the password.</li></br>
+            </ul>
+        </p>
+
+        <p><b>Additional Information:</b></br>
+            This guide covers a fundamental and straightforward approach to coding exploits. </br>
+            While there are numerous ways to enhance functionality and aesthetics, these are intentionally omitted to maintain brevity and encourage players to explore and solve challenges independently.</br>
+            To enhance your script and gain a deeper understanding, read up on "File", "Computer", "Shell", "Metaxploit" and "Metalib" in the in-game mnual.</p>
+    </div>
+
+    <div class="div-actualGuide" id="scriptingGuide">
+        <h1>SCRIPTING GUIDE</h1>
+        <p>
+        Difficulty Level: BEGINNER</br>
+        Objective of this guide: This guide aims to provide novice programmers with a comprehensive understanding of the principles of GreyScript, focusing on objects and methods in coding.
+        By providing clear explanations and practical examples, you will gain the foundational knowledge needed to navigate GreyScript with ease.
+        </br></br>
+        <b>Preface:</b>
+        This guide is a short and simplified form of the scripting manual in game. If you do not understand any words or phrases, use the manual to look up their in-depth explanation.</p>
+
+        <p><b>General programming basics:</b>
+        In programming, there are things called “Objects” and “Methods”. You can think of objects as things, one example would be a car and think of methods like actions related to those objects. 
+        The object “car” could have methods like “start” or “accelerate”. To call a method from an object, you use the syntax Object.Method(). 
+        The difference between methods and functions is that methods are associated to an object, while functions are not.
+        Functions are an essential tool in programming to prevent repetitive code. If you have to compare the same value every 12 lines, then it would make sense to use a function for that instead of separate if-querys.
+        Every programming language has something called variables. Variables are just things you assign to something. 
+        Variables can be named whatever you want them to be named. For example, we could assign a variable which is called “password” to the number 42. 
+        Variables also have a data type. Data types assign everything a type. The variable 42 would be a “Integer”, the variable “password” would be a String. All data types have built in functions.
+        Every programming language also has a syntax. The word syntax simply refers to the structure of the programming language.</p>
+
+        <p><b>GreyScript basics:</b>
+        In GreyScript the syntax is quite simple compared to other programming languages. GreyScript does not use semicolons at the end of each statement or curly braces. 
+        These curly braces usually mark a code-block. In GreyScript, each codeblock starts with a keyword like if or for. Unlike other programming languages. 
+        However, there is basically no difference between maps, objects, and classes in GreyScript. Also keep in mind that there are globally and locally scoped variables. 
+        Access a global variable with the globals. prefix. Also keep in mind that GreyScript is case-sensitive.
+        To control the flow of your code, there are so-called “if”, “while” and “for” loops. These loops check for a value and then either execute the code inside the loop or skip the code. Lets create an example: </br>
+        Lets say your favorite number is 7. You want to create a function which starts at 0 and counts up once every iteration and stops once your favorite number is reached. 
+        rightNumber = false // Declare rightNumber as false to start while-loop
+        favNumber = 7 // Declare your favorite number
+        currentNumber = 0 // Declare the starting digit for currentNumber
+        while rightNumber == false
+            if currentNumber == favNumber then // Check if the currentNumber equals favNumber
+                print("Right number")
+                rightNumber = true // Set rightNumber to true so the while-loop stops
+            else // If the currentNumber does not equal favNumber
+                print("Wrong number")
+            end if
+            currentNumber = currentNumber +1 // Count up +1
+        end while
+        Try to experiment with this code and change the values! Try and guess the outcome.
+        In this code, we used two different kinds of data types. We used Booleans which can either be true or false and we used Integers. 
+        We also used different kinds of mathematical symbols. “=” assigns something, and “==” compares something. The output would be 7 prints that each say “Wrong Number” and the 8th would say “Right Number”.
+        </br></br>
+        <b>Advanced objects in GreyScript:</b>
+        There are many objects that you could use or get returned in your code. To explain these, we will use “File” as an example. The file object can be used with any of its methods. If you want to delete a file you would simply do File(filePath).delete
+        In some cases, you might be required to use these objects and their methods in connection with other objects. If you obtain access to a device by using the “Computer” object, you can use any method from the file object in connection with that. To check if you can combine objects, check the object in the scripting manual. The computer object has “File” listed as a “method”, which indicates that you can use it in combination with the computer object.
+        </br></br>
+        <b>General tips and troubleshooting:</b>
+        Always make sure to check the manual if you encounter issues. Even for issues that are not coding-related, there usually is an entry in the manual about it.</br>
+        Every error you get has a description. Make use of that description. If the error says “Missing RParen line:” that would indicate a missing " in the line. 
+        If you dont understand what the error message is saying, google it. For example, you could google “RParen” to find out what it is if you are unsure.</br>
+        Common issues include things like variables in the wrong scope, missing characters or wrong types, make sure to check for these. </br>
+        Grey Hack uses the CodeEditor.exe to write code, however I recommend using VSCode with the “GreyScript” extension to write the code and then copy-pasting the written code into the game. </br>
+        Its also important to comment and document your code to better understand it when reading and troubleshooting. This will save you a lot of time.</p>
+    </div>
+    
+    <div class="div-actualGuide" id="hackingGuide">
+        <h1>HACKING GUIDE</h1>
+        <p>Difficulty Level: BEGINNER </br>
+        Objective of this guide: Acquaint beginners with various approaches to hacking networks. Teach fundamental principles like social engineering and deleting traces. </br>
+        </br>
+        <b>General principles:</b> </br>
+        To see the name and email of the system administrator, use the whois command. 
+        You can check the IP address of a domain with <span style="color: white; background-color: black;">nslookup www.example.com</span> or if you already have an IP address, simply nmap the IP address.
+        Always make sure to erase any traces you have left. System administrators will trace your IP back to your home computer if you do not do this. To stop them from tracing you, delete any “shell-obtained” log in the system.log file. 
+        Every connection you establish is logged in the system.log. This means that even just connecting to other players websites shows them your IP and the port which you have established the connection on.
+        </br></br>
+        <b>Social Engineering:</b> </br>
+        Employ social engineering strategically to achieve your goals. For obtaining credentials, send a "Login Issues" email to the system administrator of the target network. 
+        Social engineering can yield vital information, including passwords and library versions, or even grant reverse shell access. 
+        Prompt system administrators to update libraries through the "Outdated library found" email, potentially providing access to the network.
+        </br></br>
+        <b>Port hacking:</b> </br>
+        To hack into networks and devices using ports, you need a public IP address. After acquiring the IP address, you have to  <span style="color: white; background-color: black;">nmap</span> the network to check the open ports. 
+        If there are no ports open, scan the router with the <span style="color: white; background-color: black;">scanrouter</span> command for the kernel_router.so version.
+        You are now left with either open ports or the router port. 
+        If you find any open port, make sure to either check the hackshop for exploits for that particular library version, or create your own tool to scan and exploit. 
+        However, if there are no open ports you will have to exploit the router (port 0). Once you gain access to the router, you can further escalate onto other devices in the LAN.</p>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
